@@ -10,7 +10,7 @@ func reverseString(str string) (result string) {
 }
 
 func main() {
-	str := "Educative-Edpresso"
+	str := "Reverse"
 
 	fmt.Println(str)
 	// invoke reverseString

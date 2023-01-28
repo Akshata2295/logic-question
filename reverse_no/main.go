@@ -2,7 +2,7 @@ package main
 import "fmt"
 func reverseNumber() int {
 	var num int
-	fmt.Println("The sum of first n numbers")
+	fmt.Println("Enter the numbers")
 	fmt.Scanln(&num)
 
    res := 0
