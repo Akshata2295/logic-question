@@ -13,6 +13,4 @@ func sum() {
 	fmt.Scanln(&n)
 	sum := (n*(n+1))/2
 	fmt.Println(sum)
-	
-
 }
