@@ -13,7 +13,7 @@ func reverseString(str string) (result string) {
 }
 
 func main() {
-	str := "Hello"
+	str := "cooc"
 
 	fmt.Println(str)
 	// invoke reverseString

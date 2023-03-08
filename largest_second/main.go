@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	var large1 int = 0
-	var large2 int = 0
-	var arr = []int{12, 35, 1, 10, 34, 1, 35}
-	large1 = arr[0]
-	for i := 0; i <= 4; i++ {
+	arr := []int{1,2,3,4,5,6,7}
+	large1 := arr[0]
+	large2 := arr[0]
+
+	for i := 1; i < len(arr); i++ {
 		if large1 < arr[i] {
 			large2 = large1
 			large1 = arr[i]
@@ -16,4 +16,5 @@ func main() {
 		}
 	}
 	fmt.Println("Second largest element is: ", large2)
+	fmt.Println("Largest element:", large1)
 }

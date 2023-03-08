@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-    n := 25
+    n := 10
     for i := 2; i <= n; i++ {
         if isPrime(i) {
             fmt.Print(i, " ")

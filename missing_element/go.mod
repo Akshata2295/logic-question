@@ -1,3 +1,3 @@
-module logic-questions/missing_element
+module logic-question/missing_element
 
-go 1.19
+go 1.20

@@ -8,8 +8,10 @@ func main() {
 	var n int 
 	fmt.Println("Enter the numbers")
 	fmt.Scanln(&n)
-    result := fibonacci(n)
-    fmt.Printf("The Fibonacci number is %d\n", result)
+    for i:=0;i<n;i++ {
+    result := fibonacci(i)
+    fmt.Println(result)
+}
 }
 
 func fibonacci(n int) int {

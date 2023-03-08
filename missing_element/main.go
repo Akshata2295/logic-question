@@ -1,21 +1,39 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-func missing_number(arr []int, n int) int {
-	sum := 0
-	n_num_sum := 0
-	for i := 10; i < n; i++ {
-		sum += arr[i] 
-	}
-	n_num_sum = ((n + 1) * (n + 2)) / 2 
-	return (n_num_sum - sum)            
+func miss(arr []int) []int {
+    min := arr[0]
+    max := arr[0]
+
+    for _, val := range arr {
+        if val < min {
+            min = val
+        } else if val > max {
+            max = val
+        }
+    }
+
+    boolslice := make([]bool, max-min+1)
+
+    for _, val := range arr {
+        boolslice[val-min] = true
+    }
+
+    missing := []int{}
+
+    for i, val := range boolslice {
+        if !val {
+            missing = append(missing, min+i)
+        }
+    }
+
+    return missing
 }
+
 func main() {
-	arr := []int{5, 6, 4, 1, 2,3,7,8,9,10,12,13}
-	size1 := len(arr)
-	missing_no := missing_number(arr, size1)
-	fmt.Printf("The missing number in the array of size %d is %d", size1+1, missing_no) 
+    arr := []int{-1, 5, 3, 9}
+    c := miss(arr)
+    fmt.Println(c)
+
 }

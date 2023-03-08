@@ -16,11 +16,15 @@ func Prime(n int) bool {
 }
 
 func main() {
-	n := 25
-	for i:=2; i<=n;i++ {
+	var n int
+	fmt.Println("Enter Number")
+	fmt.Scan(&n)
+	for i:=2;i<=n;i++ {
 	if Prime(i) {
-
-		fmt.Println("Prime numbers", i, " ")
+		fmt.Println(i, "It is prime")
+	} else {
+		fmt.Println(i, "It is not prime")
 	}
 }
 }
+
